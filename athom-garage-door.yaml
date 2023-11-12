@@ -29,7 +29,7 @@ wifi:
 captive_portal:
 
 dashboard_import:
-  package_import_url: github://athom-tech/athom-configs/athom-garage-door.yaml
+  package_import_url: github://luisnarquel/athom-configs/athom-garage-door.yaml
 
 sensor:
   - platform: uptime
@@ -101,7 +101,7 @@ cover:
   - platform: template
     device_class: garage
     name: "${friendly_name}"
-    lambda: "return id(contact).state ? COVER_OPEN : COVER_CLOSED;"
+    lambda: "return id(contact).state ? COVER_CLOSED : COVER_OPEN;"
     open_action:
       then:
        - if:
